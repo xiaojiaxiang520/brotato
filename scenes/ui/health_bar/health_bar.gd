@@ -29,7 +29,7 @@ func update_bar(value: float, health: float) -> void:
 	health_label.text = str(health)
 	
 
-# 血量改变监听
+# 血量改变监听 current 当前血量， 最大生命值
 func _on_health_component_on_health_changed(current: float, max: float) -> void:
 	var value = current / max
 	update_bar(value, current)

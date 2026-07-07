@@ -10,7 +10,7 @@ var damage := 1.0
 var critical := false
 # 击退
 var knockback_power := 0.0
-# 攻击者
+# 攻击者，使用hitComponent实体
 var source: Node2D
 
 # 设置是否开启，就是如果武器在攻击出去的时候，需要设置为物理碰撞
@@ -45,4 +45,4 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is HurboxComponent:
 		# 这个信号暂时还没有使用到
 		on_hit_hurbox.emit(area)
-		print(area.owner.name)
+		print("攻击者："+area.owner.name)

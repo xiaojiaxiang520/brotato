@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="UnitStats" load_steps=3 format=3 uid="uid://k2royqohmiyr"]
+[gd_resource type="Resource" script_class="UnitStats" format=3 uid="uid://k2royqohmiyr"]
 
 [ext_resource type="Script" uid="uid://dx2ciadx22e4o" path="res://resources/units/unit_stats.gd" id="1_fwuiy"]
 [ext_resource type="Texture2D" uid="uid://cproxhccob85g" path="res://assets/sprites/Players/Player_1.png" id="1_vmaee"]
@@ -12,6 +12,6 @@ health_increase_per_wave = 0.0
 damage = 3
 damage_increase_per_wave = 0.0
 luck = 5.0
-block_change = 50.0
+block_change = 1.0
 gold_drop = 0
 metadata/_custom_type_script = "uid://dx2ciadx22e4o"

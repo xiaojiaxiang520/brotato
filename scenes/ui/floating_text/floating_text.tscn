@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlxmjwchbpk4s"]
+[gd_scene format=3 uid="uid://dlxmjwchbpk4s"]
 
-[ext_resource type="Script" uid="uid://d3le181xqudve" path="res://scenes/floating_text/floating_text.gd" id="1_2yp6n"]
+[ext_resource type="Script" uid="uid://d3le181xqudve" path="res://scenes/ui/floating_text/floating_text.gd" id="1_2yp6n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5jhfg"]
 font_size = 32
 outline_size = 10
 outline_color = Color(0.043039158, 0.04303915, 0.04303915, 1)
 
-[node name="FloatingText" type="Node2D"]
+[node name="FloatingText" type="Node2D" unique_id=1882877691]
 z_index = 10
 script = ExtResource("1_2yp6n")
 
-[node name="ValueLabel" type="Label" parent="."]
+[node name="ValueLabel" type="Label" parent="." unique_id=1585326228]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
