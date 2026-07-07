@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=3 format=3 uid="uid://c41t4jyb1kir3"]
+
+[ext_resource type="Texture2D" uid="uid://dpxw8tsbgrfse" path="res://assets/sprites/Players/Player_2.png" id="1_artcn"]
+[ext_resource type="Script" uid="uid://dx2ciadx22e4o" path="res://resources/units/unit_stats.gd" id="1_fokdh"]
+
+[resource]
+script = ExtResource("1_fokdh")
+name = "Brawler"
+icon = ExtResource("1_artcn")
+metadata/_custom_type_script = "uid://dx2ciadx22e4o"

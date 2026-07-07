@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=3 format=3 uid="uid://qdb7n2k3qjm8"]
+
+[ext_resource type="Texture2D" uid="uid://bt0lww88864ws" path="res://assets/sprites/Players/Player_5.png" id="1_ujefh"]
+[ext_resource type="Script" uid="uid://dx2ciadx22e4o" path="res://resources/units/unit_stats.gd" id="1_wv1yv"]
+
+[resource]
+script = ExtResource("1_wv1yv")
+name = "Knight"
+icon = ExtResource("1_ujefh")
+metadata/_custom_type_script = "uid://dx2ciadx22e4o"

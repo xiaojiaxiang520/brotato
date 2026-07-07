@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UnitStats" load_steps=3 format=3 uid="uid://7hecobla4lp3"]
+
+[ext_resource type="Script" uid="uid://dx2ciadx22e4o" path="res://resources/units/unit_stats.gd" id="1_02fmi"]
+[ext_resource type="Texture2D" uid="uid://dq63ocnu3lset" path="res://assets/sprites/Players/Player_3}.png" id="1_6fhtk"]
+
+[resource]
+script = ExtResource("1_02fmi")
+name = "Crazy"
+icon = ExtResource("1_6fhtk")
+metadata/_custom_type_script = "uid://dx2ciadx22e4o"
