@@ -18,16 +18,17 @@ func update_weapons_position(weapons: Array[Weapon]) -> void:
 	var reference_node: Node2D
 	match count:
 		1: reference_node = one
-		2: reference_node = one
-		3: reference_node = one
-		4: reference_node = one
-		5: reference_node = one
-		6: reference_node = one
+		2: reference_node = two
+		3: reference_node = three
+		4: reference_node = four
+		5: reference_node = five
+		6: reference_node = six
 	
 	# 获取武器节点的子节点
 	var markers := reference_node.get_children()
 	# 为了安全重新校验一下
 	if markers.size() != count:
 		return
+	# 更新武器的坐标
 	for i in count:
 		weapons[i].global_position = markers[i].global_position

@@ -35,6 +35,9 @@ func _ready() -> void:
 	dash_timer.wait_time = dash_duration # 等待时间
 	dash_cooldown_timer.wait_time = dash_cooldown # 等待时间
 	
+	# 模拟添加武器
+	add_weapon(preload("uid://dspcu8h8mjyyy"))
+	
 # 每帧
 func _process(delta: float) -> void:
 	# 移动方向，获取从按键获取这个值
@@ -64,6 +67,20 @@ func _process(delta: float) -> void:
 	# 更新方向
 	update_ratation()
 
+# 添加武器
+func add_weapon(data: ItemWeapon) -> void:
+	# 获取data中的场景weapon ，并且将其转换为Weapon
+	var weapon := data.scene.instantiate() as Weapon
+	# 进入场景树
+	add_child(weapon)
+	# 设置武器的信息
+	weapon.setup_weapon(data)
+	# 放入到武器数组中
+	current_weapons.append(weapon)
+	# 更新武器视图
+	weapon_contrainer.update_weapons_position(current_weapons)
+	
+	
 # 更新动画
 func update_animations() -> void:
 		# 因为只要这个移动的值大于0，那么就是场景里面，如果没有移动，那么就是空闲动画
@@ -109,6 +126,9 @@ func can_dash() -> bool:
 	Input.is_action_just_pressed("dash") and\
 	move_dir != Vector2.ZERO
 
+# 获取角色是否转向
+func is_facing_right() -> bool:
+	return visuals.scale.x == -0.5
 
 # 当DashTimer超时时候调用
 func _on_dash_timer_timeout() -> void:

@@ -1,27 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://b76jq3ewi8dvk"]
+[gd_scene format=3 uid="uid://b76jq3ewi8dvk"]
 
 [ext_resource type="Script" uid="uid://bdu7n2swr3yc5" path="res://scenes/weapons/weapon.gd" id="1_v4xn6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vffjk"]
 radius = 150.0
 
-[node name="WeaponBase" type="Node2D"]
+[node name="WeaponBase" type="Node2D" unique_id=1897448703]
 script = ExtResource("1_v4xn6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=960442594]
+z_index = 1
 scale = Vector2(0.5, 0.5)
 
-[node name="RangeArea" type="Area2D" parent="."]
+[node name="RangeArea" type="Area2D" parent="." unique_id=1400755355]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=480161130]
 unique_name_in_owner = true
 shape = SubResource("CircleShape2D_vffjk")
 
-[node name="CooldownTimer" type="Timer" parent="."]
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1440833014]
+one_shot = true
 
-[node name="WeaponBahavior" type="Node2D" parent="."]
+[node name="WeaponBahavior" type="Node2D" parent="." unique_id=1291373544]
 
 [connection signal="area_entered" from="RangeArea" to="." method="_on_range_area_area_entered"]
 [connection signal="area_exited" from="RangeArea" to="." method="_on_range_area_area_exited"]

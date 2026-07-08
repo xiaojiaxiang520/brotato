@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba041wkb1vxgx"]
+[gd_scene format=3 uid="uid://ba041wkb1vxgx"]
 
 [ext_resource type="PackedScene" uid="uid://b76jq3ewi8dvk" path="res://scenes/weapons/weapon_base.tscn" id="1_soyvn"]
 [ext_resource type="Texture2D" uid="uid://l5hst1cf27oo" path="res://assets/sprites/Weapons/Melee/Weapon_Punch.png" id="2_sv013"]
@@ -7,18 +7,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lfcn"]
 size = Vector2(66.375, 39.625)
 
-[node name="WeaponPunch" instance=ExtResource("1_soyvn")]
+[node name="WeaponPunch" unique_id=1034178480 instance=ExtResource("1_soyvn")]
 
-[node name="Sprite2D" parent="." index="0"]
+[node name="Sprite2D" parent="." index="0" unique_id=960442594]
 position = Vector2(19, 0)
 texture = ExtResource("2_sv013")
 
-[node name="HitboxComponent" type="Area2D" parent="Sprite2D" index="0"]
+[node name="HitboxComponent" type="Area2D" parent="Sprite2D" index="0" unique_id=1890217331]
 z_index = 1
 scale = Vector2(2, 2)
+collision_layer = 16
+collision_mask = 8
 script = ExtResource("3_etoc4")
 metadata/_custom_type_script = "uid://ba6qjla0658jt"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitboxComponent" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitboxComponent" index="0" unique_id=504653815]
+z_index = 1
 shape = SubResource("RectangleShape2D_7lfcn")
 debug_color = Color(0.8339914, 0.28376853, 0.67876136, 0.41960785)
